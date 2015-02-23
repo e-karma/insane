@@ -1,17 +1,33 @@
 {{outlet}}
-<div class="col-md-6">
+<div class="row">
+	<br>
+	<div class="col-md-3">
+		{{media-article}}
+		{{media-article}}
+	</div>
+	<div class="col-md-5">
+		<div class="btn-group" role="group" aria-label="...">
+		  <button type="button" class="btn btn-status"> Tweet </button>
+			{{#link-to 's.feed.status'class="btn"}}
+			Status
+			{{/link-to}}
+		  <button type="button" class="btn btn-status"> Article </button>
+		</div>
+		<input type="text" rows="8" >
+		<br><br>
+		<div class="newsfeed">
+			{{#each model as |status|}}
+				{{status-card status=status}}
+			{{/each}}
 
-	    <div class="page-header">
-	        <h3>Feed</h3>
-	    </div>
-	    {{#link-to 's.feed.status'}}
-	    	<button class="btn btn-info">Post Status</button>
-	    {{/link-to}}
-
-	    {{#each model as |status|}}
-	    	{{status-card status=status}}
-	    {{/each}}
-
+		</div>
+	</div>
+	<div class="col-md-2">
+	<h3>stuff</h3>
+	</div>
+	<div class="col-md-1">
+	<h3>Chat</h3>
+	</div>
 </div>
 {{!-- <div class="col-md-5">
 	<div class="page-header">

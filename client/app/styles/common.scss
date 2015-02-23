@@ -11,6 +11,7 @@ body {
   background-color :#e9eaed;
 }
 
+
 a:hover {
   text-decoration:none;
 }
@@ -59,10 +60,45 @@ a {
   color: $green;
 }
 // Buttons
-.btn-info {
+.btn {
+  padding:8px 38px;
+}
+
+.btn-info{
   background: $green;
   border-color: $dark-green;
+  &:hover {
+    background: $light-green;
+    border: $dark-green;
+  }
 }
+
+.btn-primary {
+  color: $green;
+  background-color: rgba(#fff, 0.0);
+  border: 1px solid $green;
+  &:hover {
+    background:$green;
+    border:$green;
+    color: #fff;
+  }
+}
+.btn-secondary {
+  color: $black;
+  background-color: rgba(#fff, 0.0);
+  border: 1px solid $black;
+  &:hover {
+    background:$black;
+    border:$black;
+    color: #fff;
+  }
+}
+.btn-status {
+  background: $black;
+  color: #fff;
+}
+.btn-group>.btn:first-child {margin-left:2em;}
+
 //navbar
 .navbar-inverse {
   background-color: $black;
@@ -92,4 +128,13 @@ a {
 
 .album-title {
   background-color: $green;
+}
+
+//user feed page //
+
+input {
+  width:80%;
+  padding-top:15px;
+  padding-bottom:30px;
+  border: 1px solid #151515;
 }

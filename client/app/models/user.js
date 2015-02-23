@@ -16,6 +16,9 @@ export default DS.Model.extend({
     tagline: DS.attr('string'),
     email: DS.attr('string'),
     website: DS.attr('string'),
+    userType: DS.attr('string'),
+    createdAt: DS.attr('string'),
+    updatedAt: DS.attr('string'),
 
     // computed
     fullName: function () {

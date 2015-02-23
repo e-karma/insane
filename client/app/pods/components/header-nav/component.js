@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     menu: [{
-        'title': 'Index',
+        'title': 'Dashboard',
         'link': 'index'
     }, {
         'title': 'Feed',
@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         'title': 'Posts',
         'link': 's.posts'
     }, {
-        'title': 'Users',
+        'title': 'Settings',
         'link': 's.users',
         'submenu': [{
             'title': 'Index',
@@ -23,18 +23,18 @@ export default Ember.Component.extend({
             'title': 'Create New User',
             'link': 's.users.create'
         }]
+    // }, {
+    //     'title': 'Templates',
+    //     'link': 's.templates',
+    //     'submenu': [{
+    //         'title': 'Index',
+    //         'link': 's.templates.index'
+    //     }, {
+    //         'title': 'Create New Template',
+    //         'link': 's.templates.create'
+    //     }]
     }, {
-        'title': 'Templates',
-        'link': 's.templates',
-        'submenu': [{
-            'title': 'Index',
-            'link': 's.templates.index'
-        }, {
-            'title': 'Create New Template',
-            'link': 's.templates.create'
-        }]
-    }, {
-        'title': 'Vendors',
+        'title': 'CRM',
         'link': 's.vendors',
         'submenu': [{
             'title': 'Index',

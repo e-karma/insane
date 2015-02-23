@@ -7,6 +7,7 @@ export default DS.Model.extend({
     note: DS.attr('string'),
     state: DS.attr('string'),
     activity: DS.attr('string'),
-    createdAt: DS.attr('string')
-    
+    createdAt: DS.attr('string'),
+    updatedAt: DS.attr('string')
+
 });
