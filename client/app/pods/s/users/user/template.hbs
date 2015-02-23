@@ -1,0 +1,16 @@
+{{outlet}}
+<div class="container">
+    
+  {{user-profile user=model}}
+  <div class="col-xs-12">
+    <div class="row">
+      <h3>List of Vendors</h3>
+    </div>
+    {{#each vendor in vendors}}
+      <div class="row">
+        <h4>Name: {{vendor.name}}</h4>
+        <h6>Desc: {{vendor.description}}</h6>
+      </div>
+    {{/each}}
+  </div>
+</div>

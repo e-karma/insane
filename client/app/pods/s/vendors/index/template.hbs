@@ -1,0 +1,12 @@
+{{outlet}}
+
+<div class="container">
+	<div class="page-header">
+        <h2>Vendors</h2>
+    </div>
+	{{#each model as |vendor|}}
+		<h3>{{vendor.name}}</h3>
+		<h4>belongs to: {{vendor.user.firstName}}&nbsp;{{vendor.user.lastName}}</h4>
+		<p>{{vendor.description}}</p>
+	{{/each}}
+</div>
