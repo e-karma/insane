@@ -46,10 +46,50 @@ a:hover {
 
 
 // Ryan styles
+$black: #151515;
+$green: #97d700;
+$light-green: #aee52b;
+$dark-green: #90df3b;
+//main
 
+body {
+  background:#fff;
+}
+a {
+  color: $green;
+}
+// Buttons
+.btn-info {
+  background: $green;
+  border-color: $dark-green;
+}
+//navbar
 .navbar-inverse {
-  background-color: #151515;
+  background-color: $black;
 }
 .navbar-brand {
-  color: #97d700 !important;
+  color: $green !important;
+}
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse
+.navbar-nav>.open>a:focus {
+  background-color: $green;
+}
+.navbar-inverse .dropdown-menu {
+  background-color: $green;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+  background: $green;
+}
+
+.navbar-inverse .dropdown-menu>li>a:hover {
+  background-color: $light-green;
+}
+
+//
+
+.album-title {
+  background-color: $green;
 }
