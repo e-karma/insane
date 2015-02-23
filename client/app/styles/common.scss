@@ -6,13 +6,13 @@
           box-sizing: border-box;
 }
 
-body { 
+body {
 	margin: 30px;
   background-color :#e9eaed;
 }
 
 a:hover {
-  text-decoration:none; 
+  text-decoration:none;
 }
 
 .bump {
@@ -42,4 +42,14 @@ a:hover {
 #mapfeed {
   height: 300px;
   width: 100%;
+}
+
+
+// Ryan styles
+
+.navbar-inverse {
+  background-color: #151515;
+}
+.navbar-brand {
+  color: #97d700 !important;
 }

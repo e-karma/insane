@@ -65,6 +65,16 @@ Router.map(function() {
           });
       });
 
+      this.route("mailbox", function() {
+        this.route('user', {
+          path: ":mailbox_id"
+        });
+
+        this.route("create", {
+            path: "create"
+        });
+      });
+
       this.route("feed", function() {
           this.route("status", {
               path: "status"
@@ -94,8 +104,7 @@ Router.map(function() {
 
   this.route("login");
   this.route("register");
-  this.resource('user', function() {});
-  this.resource('bats', function() {});
+
 });
 
 export default Router;
