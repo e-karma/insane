@@ -3,24 +3,41 @@
 <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">
-    <h2>{{name}}</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <h3>{{model.name}}</h3>
+        <h5>{{model.city}}, {{model.state}}</h5>
+      </div>
+      <div class="col-md-3">
+        <br><br>
+        <label>Category:</label>
+        {{model.category}}<br>
+        <label>Website:</label>
+        {{model.urlSegment}}
+      </div>
+      <div class="col-md-3">
+        <br><br>
+        <label>Rating:</label>
+        {{model.rating}}<br>
+        <label>e-mail:</label>
+        {{model.email}}
+      </div>
+      <div class="col-md-3">
+        <br><br>
+        <label>Phone:</label>
+        {{model.phone}}
+        <label>Address:</label>
+        {{model.address}}
+      </div>
+    </div>
   </div>
-  <table class="table">
-    <thead>
-      <tr>
+  <div class="panel-body">
+    {{model.description}}
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item"><h5>Opportunities</h5></li>
+    <li class="list-group-item"><h5>Tasks</h5></li>
+    <li class="list-group-item"><h5>Employees</h5></li>
 
-        <td>Owner</td>
-        <td>Address</td>
-        <td>description</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-
-          <td><h5>{{user.firstName}}&nbsp;{{vendor.user.lastName}}</h5></td>
-          <td><h5>{{description}}</h5></td>
-          <td><h5>{{address}}</h5></td>
-      </tr>
-    </tbody>
-  </table>
+  </ul>
 </div>

@@ -150,6 +150,10 @@ input {
       background-color: $green;
       border: 1px solid $dark-green;
     }
+    &:focus {
+      background-color: $green;
+      border: 1px solid $dark-green;
+    }
   }
 }
 a.list-group-item {

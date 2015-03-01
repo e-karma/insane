@@ -28,6 +28,9 @@ export default DS.Model.extend({
 		state: DS.attr('string'),
 		zip: DS.attr('number'),
 
+		// default
+		createdAt: DS.attr('string'),
+		updatedAt: DS.attr('string'),
     // computed
     slug: function() {
         var slug = this.get('name').toString().toLowerCase().replace(/[^a-z0-9]+/g, '-');
