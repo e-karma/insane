@@ -3,7 +3,7 @@
     <div class="list-group">
       {{#link-to 's.posts.create'}}<div class="btn-lg btn-info bump">Create Post</div>{{/link-to}}
       <hr>
-      <div class="list-group-item"><h5>Released Posts</h5></div>
+			{{#link-to 's.posts.index' class="list-group-item"}}<h5>Released Posts</h5>{{/link-to}}
       {{#each model as |post|}}
         {{#link-to 's.posts.post' post.id class='list-group-item'}}{{post.title}}{{/link-to}}
       {{/each}}
@@ -11,27 +11,7 @@
 	</div>
 	<div class="col-md-10">
 		<div class="row ">
-
         {{outlet}}
-
-
-        {{#each model as |post|}}
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <img src="http://placehold.it/300x200" alt="...">
-            <div class="caption">
-            <h3>{{post.title}}</h3>
-            <p>{{post.body}}</p>
-            <p>
-            {{#link-to 's.posts.post' post.id class="btn btn-primary"}}View{{/link-to}}
-            <a href="#" class="btn btn-secondary" role="button">Pin It</a>
-            </p>
-            </div>
-          </div>
-        </div>
-        {{/each}}
-
-
 		</div>
 	</div>
 </div>

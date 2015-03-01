@@ -1,0 +1,29 @@
+<hr>
+<form>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="identification">First Name</label>
+            {{input type="text" value=model.title class='form-control'}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="rating">Last Name</label>
+            {{input type="number" value=model.isCompleted class='form-control'}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="description">Position</label>
+            {{input type="number" value=model.hotness class='form-control'}}
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="description">Notes</label>
+        {{textarea type="text" value=model.notes class='form-control'}}
+    </div>
+
+    <button class="btn btn-default" {{action 'createVendor' model}}>Create Task</button>
+</form>

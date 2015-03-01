@@ -67,7 +67,12 @@ a {
 .btn-info{
   background: $green;
   border-color: $dark-green;
+  text-decoration:none;
   &:hover {
+    background: $light-green;
+    border: $dark-green;
+  }
+  &:active {
     background: $light-green;
     border: $dark-green;
   }
@@ -161,5 +166,14 @@ a.list-group-item {
     background: $green;
     border: 1px solid $dark-green;
     color: white;
+  }
+}
+
+ul.nav.nav-tabs.nav-justified {
+  li {
+    a.active {
+      color: $green;
+      background:white;
+    }
   }
 }

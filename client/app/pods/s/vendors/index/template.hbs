@@ -1,1 +1,31 @@
-{{outlet}}
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <h2>Vendors</h2>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Vendor Name</td>
+        <td>Owner</td>
+        <td>Address</td>
+        <td>description</td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |vendor|}}
+
+        {{#link-to 's.vendors.vendor' vendor.id tagName='tr'}}
+
+          <td><h5>{{vendor.name}}</h5></td>
+          <td><h5>{{vendor.user.firstName}}&nbsp;{{vendor.user.lastName}}</h5></td>
+          <td><h5>{{vendor.description}}</h5></td>
+          <td><h5>{{vendor.address}}</h5></td>
+
+        {{/link-to}}
+
+      {{/each}}
+    </tbody>
+  </table>
+</div>

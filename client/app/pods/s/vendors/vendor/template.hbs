@@ -34,10 +34,19 @@
   <div class="panel-body">
     {{model.description}}
   </div>
-  <ul class="list-group">
-    <li class="list-group-item"><h5>Opportunities</h5></li>
-    <li class="list-group-item"><h5>Tasks</h5></li>
-    <li class="list-group-item"><h5>Employees</h5></li>
 
-  </ul>
 </div>
+
+<!-- Table -->
+<div class="row">
+  <div class="col-md-12">
+    <ul class="nav nav-tabs nav-justified">
+      <li role="presentation">{{link-to 'Tasks' 's.vendors.vendor.tasks'}}</li>
+      <li role="presentation">{{link-to 'Employees' 's.vendors.vendor.employees'}}</li>
+      <li role="presentation">{{link-to 'Opportunities' 's.vendors.vendor.opportunities'}}</li>
+    </ul>
+  </div>
+</div>
+
+
+{{outlet}}

@@ -84,6 +84,16 @@ Router.map(function() {
     this.route("vendors", function() {
       this.route("vendor", {
           path: ":vendor_id"
+      }, function() {
+        this.route('tasks', function() {
+          this.route('create');
+        });
+        this.route('opportunities', function() {
+          this.route('create');
+        });
+        this.route('employees', function() {
+          this.route('create');
+        });
       });
 
       this.route("create", {
@@ -110,9 +120,6 @@ Router.map(function() {
   this.route("login");
   this.route("register");
 
-  this.resource('tasks', function() {});
-  this.resource('employees', function() {});
-  this.resource('opportunities', function() {});
 });
 
 export default Router;
