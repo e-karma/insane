@@ -142,3 +142,20 @@ input {
 .top75 {
   margin-top:75px;
 }
+.list-group-item {
+  &.active{
+    background-color:$green;
+    border: 1px solid $dark-green;
+    &:hover {
+      background-color: $green;
+      border: 1px solid $dark-green;
+    }
+  }
+}
+a.list-group-item {
+  &:hover {
+    background: $green;
+    border: 1px solid $dark-green;
+    color: white;
+  }
+}

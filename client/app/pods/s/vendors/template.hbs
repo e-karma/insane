@@ -1,1 +1,55 @@
-{{outlet}}
+
+<div class="container top75">
+	<div class="row">
+		<div class="col-md-2">
+      <div class="list-group">
+        {{#link-to 's.vendors.create'}}<div class="btn-lg btn-info bump">Create Vendor</div>{{/link-to}}
+        <hr>
+        <div class="list-group-item"><h5>Vendors</h5></div>
+        {{#each model as |vendor|}}
+          {{#link-to 's.vendors.vendor' vendor.id class='list-group-item'}}{{vendor.name}}{{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+		<div class="col-md-10">
+      {{outlet}}
+
+
+      <h4>Vendor Template</h4>
+      <!-- Table -->
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+          <h2>Vendors</h2>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Vendor Name</td>
+              <td>Owner</td>
+              <td>Address</td>
+              <td>description</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each model as |vendor|}}
+
+              {{#link-to 's.vendors.vendor' vendor.id tagName='tr'}}
+
+                <td><h5>{{vendor.name}}</h5></td>
+                <td><h5>{{vendor.user.firstName}}&nbsp;{{vendor.user.lastName}}</h5></td>
+                <td><h5>{{vendor.description}}</h5></td>
+                <td><h5>{{vendor.address}}</h5></td>
+
+              {{/link-to}}
+
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+
+
+		</div>
+	</div>
+</div>

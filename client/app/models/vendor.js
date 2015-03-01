@@ -7,12 +7,26 @@ export default DS.Model.extend({
 	templates: DS.hasMany('template'),
 	services: DS.hasMany('service'),
 
+	// rb added
+	tasks: DS.hasMany('task'),
+	employees: DS.hasMany('employee'),
+	opportunities: DS.hasMany('opportunity'),
+
     // attr
     name: DS.attr('string'),
     description: DS.attr('string'),
     urlSegment: DS.attr('string'),
     address: DS.attr('string'),
     location: DS.attr(),
+
+		// rb added
+		category: DS.attr('string'),
+		rating: DS.attr('number'),
+		phone: DS.attr('number'),
+		email: DS.attr('string'),
+		city: DS.attr('string'),
+		state: DS.attr('string'),
+		zip: DS.attr('number'),
 
     // computed
     slug: function() {

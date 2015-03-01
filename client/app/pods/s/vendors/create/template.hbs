@@ -1,22 +1,80 @@
-{{outlet}}
-
-<div class="container">
     <div class="page-header">
         <h2>Create Vendor</h2>
     </div>
     <form>
-        <div class="form-group">
-            <label for="identification">Name</label>
-            {{input type="text" value=name class='form-control'}}
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="identification">Company Name</label>
+                {{input type="text" value=model.name class='form-control'}}
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="category">Category</label>
+                {{input type="text" value=model.category class='form-control'}}
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                {{input type="range" value=model.rating class='form-control'}}
+            </div>
+          </div>
         </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            {{textarea type="text" value=model.description class='form-control'}}
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="phone">Phone #</label>
+                {{input type='tel' value=model.phone class='form-control'}}
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="email">e-Mail</label>
+                {{input type="email" value=model.email class='form-control'}}
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="url">Site URL</label>
+                {{input type="url" value=model.url class='form-control'}}
+            </div>
+          </div>
+        </div>
+
         <div class="form-group">
             <label for="address">Address</label>
-            {{input type="text" value=address class='form-control'}}
+            {{input type="text" value=model.address class='form-control'}}
         </div>
-        <div class="form-group">
-            <label for="body">Description</label>
-            {{textarea value=description class='form-control'}}
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="city">City</label>
+                {{input type="text" value=model.city class='form-control'}}
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="state">State</label>
+                {{input type="text" value=model.state class='form-control'}}
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+                <label for="zip">Zip</label>
+                {{input type="number" value=model.zip class='form-control'}}
+            </div>
+          </div>
         </div>
         <button class="btn btn-default" {{action 'createVendor' model}}>Create Vendor</button>
     </form>
-</div>
+
+<br><br><br><br>
