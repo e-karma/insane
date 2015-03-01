@@ -8,6 +8,8 @@ export default DS.Model.extend({
     // attributes
     name: DS.attr('string'),
     description: DS.attr('string'),
-    tags: DS.attr('array')
-    
+    tags: DS.attr('array'),
+
+    createdAt: DS.attr('string'),
+    updatedAt: DS.attr('string')
 });

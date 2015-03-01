@@ -10,5 +10,8 @@ export default DS.Model.extend({
   notes: DS.attr('string'),
   isCompleted: DS.attr('boolean'),
   dueDate: DS.attr('date'),
-  hotness: DS.attr('number')
+  hotness: DS.attr('number'),
+
+  createdAt: DS.attr('string'),
+  updatedAt: DS.attr('string')
 });

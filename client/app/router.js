@@ -81,11 +81,11 @@ Router.map(function() {
         });
     });
 
+
     this.route("vendors", function() {
-      this.route("vendor", {
-          path: ":vendor_id"
-      }, function() {
+      this.route("vendor", { path: ":vendor_id"}, function() {
         this.route('tasks', function() {
+          this.route('task', { path: ":task_id"});
           this.route('create');
         });
         this.route('opportunities', function() {

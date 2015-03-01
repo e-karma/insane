@@ -6,7 +6,7 @@ export default Ember.Route.extend(DestroyNew, {
         return this.store.createRecord('task');
     },
     actions: {
-        createPost: function(model) {
+        createTask: function(model) {
         	// model.set('tags', ['lifestyle', 'health', 'tech']);
         	var userId = this.session.get('user.id');
 
