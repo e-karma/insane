@@ -1,0 +1,18 @@
+<div class="container top75">
+	<div class="col-md-2">
+    <div class="list-group">
+      {{#link-to 's.sites.create'}}<div class="btn-lg btn-info bump">Create Site</div>{{/link-to}}
+      <hr>
+			{{#link-to 's.sites.index' class="list-group-item"}}<h5>Current Sites</h5>{{/link-to}}
+      {{#each site in model}}
+        {{#link-to 's.sites.site' site.id class='list-group-item'}}{{site.domain}}{{/link-to}}
+      {{/each}}
+    </div>
+	</div>
+	<div class="col-md-10">
+		<div class="row ">
+
+        {{outlet}}
+		</div>
+	</div>
+</div>

@@ -14,6 +14,11 @@ export default Ember.Component.extend({
         'title': 'Posts',
         'link': 's.posts'
     }, {
+        'title': 'Sites',
+        'link': 's.sites'
+    },
+
+       {
         'title': 'Settings',
         'link': 's.users',
         'submenu': [{

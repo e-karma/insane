@@ -18,7 +18,15 @@ Router.map(function() {
             path: "create"
         });
     });
+    this.route('sites', function() {
+      this.route("site", {
+          path: ":site_id"
+      });
 
+      this.route("create", {
+          path: "create"
+      });
+    });
     this.route("templates", function() {
         this.route("template", {
             path: ":template_id"

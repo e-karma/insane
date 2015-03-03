@@ -1,9 +1,6 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-
-  //relationships
-  vendor: DS.belongsTo('vendor'),
+var Task = DS.Model.extend({
 
   //attributes
   title: DS.attr('string'),
@@ -12,6 +9,11 @@ export default DS.Model.extend({
   dueDate: DS.attr('date'),
   hotness: DS.attr('number'),
 
+  //relationships
+  vendor: DS.belongsTo('vendor'),
+
   createdAt: DS.attr('string'),
   updatedAt: DS.attr('string')
 });
+
+export default Task;

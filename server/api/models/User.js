@@ -11,7 +11,7 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
     attributes: {
-        
+
         // Relationships
         posts: {
             collection: 'post',
@@ -33,6 +33,19 @@ module.exports = {
             collection: 'status',
             via: 'user'
         },
+        tasks: {
+            collection: 'task',
+            via: 'user'
+          },
+        sites:{
+            collection: 'site',
+            via: 'user'
+        },
+        employees:  {
+              collection: 'employee',
+              via: 'user'
+          },
+        
 
         // attributes
         firstName: 'STRING',

@@ -8,7 +8,7 @@ export default DS.Model.extend({
 	services: DS.hasMany('service'),
 
 	// rb added
-	tasks: DS.hasMany('task'),
+	tasks: DS.hasMany('task', {async:true}),
 	employees: DS.hasMany('employee'),
 	opportunities: DS.hasMany('opportunity'),
 

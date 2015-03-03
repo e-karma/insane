@@ -9,22 +9,15 @@
     </tr>
   </thead>
   <tbody>
-    {{#each model as |task|}}
-    <tr>
-      <td>{{title}}</td>
-      <td>{{hotness}}</td>
-      <td>{{isCompleted}}</td>
-      <td>{{dueDate}}</td>
-      <td>{{notes}}</td>
-    </tr>
-    {{/each}}
+
+
+
+
+    {{outlet}}
+
   </tbody>
 </table>
 
 {{#link-to 's.vendors.vendor.tasks.create'}}
 <div class="btn btn-info bump">Create New Task</div>
 {{/link-to}}
-
-
-
-{{outlet}}
