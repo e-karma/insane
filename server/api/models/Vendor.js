@@ -8,18 +8,22 @@
 module.exports = {
 
     attributes: {
-        
+
         // relationships
-        services: {         
+        services: {
             collection: 'service',
             via: 'vendor'
         },
-        templates: {         
+        templates: {
             collection: 'template',
             via: 'vendor'
         },
         homepages: {
             model: 'homepage'
+        },
+        tasks: {
+          collection: 'task',
+          via: 'vendor'
         },
 
         // TODO ideally the user should be many to many with vendor in the future so that different users

@@ -11,7 +11,7 @@ module.exports = {
     user: {
         model: 'user'
     },
-    
+
     estClose : { type: 'date' },
 
     estAmount : { type: 'float' },

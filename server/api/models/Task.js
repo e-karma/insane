@@ -11,7 +11,8 @@ module.exports = {
     user: {
         model: 'user'
     },
-    
+    vendor : { model: 'vendor'},
+
     dueDate : { type: 'date' },
 
     hotness : { type: 'float' },
